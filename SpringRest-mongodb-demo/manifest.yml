@@ -1,0 +1,8 @@
+applications:
+- name: Restmongoinstance
+  memory: 400M
+  instances: 1
+  host: Restmongoinstance
+  buildpack: java_buildpack
+  path: ./target/Restmongoinstance-0.1.jar
+

@@ -1,0 +1,1 @@
+This application is developed using Spring Rest Application and connects with Mongo DB. This is a cloud native application, based on cloud foundry standards. It has Junit test cases for it.
