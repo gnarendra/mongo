@@ -1,0 +1,8 @@
+applications:
+- name: SpringbootMysqlDemo
+  memory: 400M
+  instances: 1
+  host: SpringbootMysqlDemo
+  buildpack: java_buildpack
+  path: ./target/SpringBootMysqlApp-0.0.1.jar
+

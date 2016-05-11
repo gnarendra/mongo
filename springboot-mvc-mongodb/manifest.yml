@@ -1,0 +1,8 @@
+applications:
+- name: SpringBootMongoDB-Demo
+  memory: 512M
+  instances: 1
+  host: SpringBootMongoDB-Demo
+  buildpack: java_buildpack
+  path: ./target/springboot-MongoDb-demo-0.1.jar
+
