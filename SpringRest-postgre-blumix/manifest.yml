@@ -1,0 +1,8 @@
+applications:
+- name: rest-postgresql
+  memory: 400M
+  instances: 1
+  host: rest-postgresql
+  buildpack: java_buildpack
+  path: target/rest-postgresql-1.jar
+
