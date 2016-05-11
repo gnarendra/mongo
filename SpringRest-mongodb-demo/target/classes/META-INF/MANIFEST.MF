@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: Spring REST Mongo DB Demo
-Implementation-Version: 0.1
-Built-By: SecureBrowser
-Implementation-Vendor-Id: techm.cisco.demo
-Build-Jdk: 1.8.0_91
-Created-By: Maven Integration for Eclipse
-Implementation-Vendor: Pivotal Software, Inc.
-

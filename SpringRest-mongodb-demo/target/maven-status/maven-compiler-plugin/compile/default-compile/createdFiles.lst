@@ -1,5 +1,0 @@
-com/starterkit/controller/ToDoController.class
-com/starterkit/domain/ToDo.class
-com/starterkit/repository/ToDoRepository.class
-com/starterkit/Application.class
-com/starterkit/service/ToDoService.class
