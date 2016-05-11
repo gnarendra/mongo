@@ -1,8 +1,0 @@
-applications:
-- name: Springrest-mysql
-  memory: 400M
-  instances: 1
-  host: Springrest-mysql
-  buildpack: java_buildpack
-  path: target/Springrest-mysql-1.jar
-

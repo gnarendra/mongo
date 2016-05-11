@@ -1,8 +1,0 @@
-applications:
-- name: Springrest-post
-  memory: 400M
-  instances: 1
-  host: rest-postgre
-  buildpack: java_buildpack
-  path: target/Springrest-post-1.jar
-
