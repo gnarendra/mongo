@@ -17,7 +17,7 @@ public class Application implements CommandLineRunner{
 
 	
 	/**
-	 * loading all beans for this application
+	 * Loading all beans for this application
 	 * @param args
 	 */
 	public static void main(String[] args) throws Exception{

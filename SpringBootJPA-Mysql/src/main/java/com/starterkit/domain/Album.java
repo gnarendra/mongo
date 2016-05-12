@@ -35,7 +35,7 @@ public class Album
     }
 
     /**
-     * @return
+     * @return id
      */
     public String getId() {
         return id;
@@ -49,7 +49,7 @@ public class Album
     }
 
     /**
-     * @return
+     * @return title
      */
     public String getTitle() {
         return title;
@@ -63,7 +63,7 @@ public class Album
     }
 
     /**
-     * @return
+     * @return artist
      */
     public String getArtist() {
         return artist;
@@ -77,7 +77,7 @@ public class Album
     }
 
     /**
-     * @return
+     * @return releaseYear
      */
     public String getReleaseYear() {
         return releaseYear;

@@ -32,7 +32,7 @@ public class AlbumService {
 	}
 
 	/**
-	 * removing albums from the List
+	 * Removing albums from the List
 	 * 
 	 * @param albumId
 	 */
@@ -41,7 +41,7 @@ public class AlbumService {
 	}
 
 	/**
-	 * search the album based on tittle
+	 * Search the album based on tittle
 	 * 
 	 * @param albumTitle
 	 * @return matching album List
@@ -65,7 +65,7 @@ public class AlbumService {
 	}
 
 	/**
-	 * Edit the albums
+	 * Edit an album
 	 * 
 	 * @param id
 	 * @param title
@@ -81,7 +81,7 @@ public class AlbumService {
 	}
 
 	/**
-	 * get album based on Id
+	 * Get album based on Id
 	 * 
 	 * @param id
 	 * @return

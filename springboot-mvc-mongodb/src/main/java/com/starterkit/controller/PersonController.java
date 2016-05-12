@@ -18,8 +18,8 @@ import com.starterkit.domain.Person;
 import com.starterkit.dto.PersonDTO;
 import com.starterkit.repository.PersonRepository;
 /**
- * @author ismailibrahim.s@cognizant.com Controller class for provide service to
- *         incoming request
+ * @author ismailibrahim.s@cognizant.com 
+ *         Controller class for providing service to incoming request
  */
 @Controller
 @RequestMapping("/person")
@@ -124,7 +124,7 @@ public class PersonController {
 	}
 
 	/**
-	 * forward to the createPerson page
+	 * Forward to the createPerson page
 	 * 
 	 * @return createPerson.html
 	 */

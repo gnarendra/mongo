@@ -25,7 +25,7 @@ public class AlbumController {
 	 * List down all albums
 	 * 
 	 * @param model
-	 * @return albums.html
+	 * @return welcome.html
 	 * @throws Exception
 	 */
 
@@ -33,14 +33,6 @@ public class AlbumController {
 	public String welcome(Model model) {
 		model.addAttribute("count", albumService.getAlbumList().size());
 		return "welcome";
-	}
-
-	@RequestMapping(value = "/albumsslow", method = RequestMethod.GET)
-	public String listProductsSlow(Model model) throws Exception {
-		List<Album> albums = (List<Album>) albumService.getAlbumList();
-		model.addAttribute("albums", albums);
-		model.addAttribute("countStr", String.format("Total of %s albums", albums.size()));
-		return "albums";
 	}
 
 	/**
@@ -58,7 +50,7 @@ public class AlbumController {
 	}
 
 	/**
-	 * deleting the alubums
+	 * Deleting an album
 	 * 
 	 * @param id
 	 * @param model
@@ -91,7 +83,7 @@ public class AlbumController {
 	}
 
 	/**
-	 * Eding the album
+	 * Editing an album
 	 * 
 	 * @param id
 	 * @param model
@@ -105,7 +97,7 @@ public class AlbumController {
 	}
 
 	/**
-	 * searching the album from the list
+	 * Searching the album from the list
 	 * 
 	 * @param title
 	 * @param model
@@ -122,7 +114,7 @@ public class AlbumController {
 	}
 
 	/**
-	 * adding albums
+	 * Adding albums
 	 * 
 	 * @param title
 	 * @param artist
@@ -148,7 +140,7 @@ public class AlbumController {
 	}
 
 	/**
-	 * Editing the album
+	 * Editing an album
 	 * 
 	 * @param title
 	 * @param artist

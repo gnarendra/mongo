@@ -33,7 +33,7 @@ public class Person {
 	}
 
 	/**
-	 * @return the id
+	 * @return id
 	 */
 	public String getId() {
 		return id;
@@ -41,14 +41,13 @@ public class Person {
 
 	/**
 	 * @param id
-	 *            the id to set
 	 */
 	public void setId(String id) {
 		this.id = id;
 	}
 
 	/**
-	 * @return the firstName
+	 * @return firstName
 	 */
 	public String getFirstName() {
 		return firstName;
@@ -56,14 +55,13 @@ public class Person {
 
 	/**
 	 * @param firstName
-	 *            the firstName to set
 	 */
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
 
 	/**
-	 * @return the lastName
+	 * @return lastName
 	 */
 	public String getLastName() {
 		return lastName;
@@ -71,7 +69,6 @@ public class Person {
 
 	/**
 	 * @param lastName
-	 *            the lastName to set
 	 */
 	public void setLastName(String lastName) {
 		this.lastName = lastName;

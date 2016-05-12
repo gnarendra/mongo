@@ -19,7 +19,7 @@ public class ApplicationInfo
     }
 
     /**
-     * @return
+     * @return profiles
      */
     public String[] getProfiles() {
         return profiles;
@@ -33,7 +33,7 @@ public class ApplicationInfo
     }
 
     /**
-     * @return
+     * @return services
      */
     public String[] getServices() {
         return services;
