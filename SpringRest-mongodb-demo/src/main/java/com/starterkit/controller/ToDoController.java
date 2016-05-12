@@ -1,6 +1,5 @@
 package com.starterkit.controller;
 
-
 import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +14,8 @@ import com.starterkit.domain.ToDo;
 import com.starterkit.service.ToDoService;
 
 /**
- * @author Anand.Kittappa@cognizant.com
- * Reset controller class for provide service to incoming request 
+ * @author Anand.Kittappa@cognizant.com Reset controller class for provide
+ *         service to incoming request
  */
 @RestController
 public class ToDoController {
@@ -25,7 +24,8 @@ public class ToDoController {
 	private ToDoService ToDoService;
 
 	/**
-	 * returing the list task while application start up
+	 * Get the list task while application start up
+	 * 
 	 * @param model
 	 * @return todo.html
 	 */
@@ -35,7 +35,8 @@ public class ToDoController {
 	}
 
 	/**
-	 * creating a new Task
+	 * Creating a new Task
+	 * 
 	 * @param model
 	 * @return addtask.html
 	 */
@@ -47,6 +48,7 @@ public class ToDoController {
 
 	/**
 	 * Get the input from user and add the task to DB
+	 * 
 	 * @param TName
 	 * @param Tdescription
 	 * @param model
@@ -55,17 +57,17 @@ public class ToDoController {
 	@RequestMapping(value = "/addTodo", method = RequestMethod.POST)
 	public ModelAndView addTask(@RequestParam(value = "TName") String taskName,
 			@RequestParam(value = "Tdescription") String taskDescription, Model model) {
-		
-		if(ToDoService.saveTask(taskName, taskDescription))
-		{
+
+		if (ToDoService.saveTask(taskName, taskDescription)) {
 			return new ModelAndView("todo", "tasks", ToDoService.getAllTask());
-		}
-		else{
+		} else {
 			return new ModelAndView("todo", "tasks", new ArrayList<>());
 		}
 	}
+
 	/**
 	 * Get the input from user to update the task to DB
+	 * 
 	 * @param TName
 	 * @param Tdescription
 	 * @param id
@@ -74,18 +76,18 @@ public class ToDoController {
 	 */
 	@RequestMapping(value = "/editTodo", method = RequestMethod.POST)
 	public ModelAndView editTodo(@RequestParam(value = "TName") String taskName,
-			@RequestParam(value = "Tdescription") String taskDescription,@RequestParam("id") String id, Model model) {
-		
-		if(ToDoService.editTask(id, taskName, taskDescription))
-		{
+			@RequestParam(value = "Tdescription") String taskDescription, @RequestParam("id") String id, Model model) {
+
+		if (ToDoService.editTask(id, taskName, taskDescription)) {
 			return new ModelAndView("todo", "tasks", ToDoService.getAllTask());
-		}
-		else{
+		} else {
 			return new ModelAndView("todo", "tasks", new ArrayList<>());
 		}
 	}
+
 	/**
-	 * delete the task from task 
+	 * Delete the task from task
+	 * 
 	 * @param id
 	 * @param model
 	 * @return todo.html
@@ -95,17 +97,17 @@ public class ToDoController {
 		ToDoService.removetask(id);
 		return new ModelAndView("todo", "tasks", ToDoService.getAllTask());
 	}
-	
-	 /**
-	  * forward edit request to html page 
+
+	/**
+	 * forward edit request to html page
+	 * 
 	 * @param id
 	 * @param model
 	 * @return edittask.html
 	 */
 	@RequestMapping(value = "/EditTask", method = RequestMethod.GET)
-	    public ModelAndView editTask(@RequestParam(value="id", required=true) String id, Model model)
-	    {
-	     return new ModelAndView("editTask", "ToDo", ToDoService.getTask(id));
-	    }
+	public ModelAndView editTask(@RequestParam(value = "id", required = true) String id, Model model) {
+		return new ModelAndView("editTask", "ToDo", ToDoService.getTask(id));
+	}
 
 }

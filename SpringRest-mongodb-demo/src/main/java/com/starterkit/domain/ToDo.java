@@ -20,53 +20,67 @@ public class ToDo {
 		this.taskName = taskName;
 		this.takDescription = takDescription;
 	}
+
 	/**
-	 * 
+	 * Default controller
 	 */
 	public ToDo() {
 	}
+
 	@Id
 	private String id;
-	
+
 	private String taskName;
 	private String takDescription;
+
 	/**
 	 * @return the id
 	 */
 	public String getId() {
 		return id;
 	}
+
 	/**
-	 * @param id the id to set
+	 * @param id
+	 *            the id to set
 	 */
 	public void setId(String id) {
 		this.id = id;
 	}
+
 	/**
 	 * @return the taskName
 	 */
 	public String getTaskName() {
 		return taskName;
 	}
+
 	/**
-	 * @param taskName the taskName to set
+	 * @param taskName
+	 *            the taskName to set
 	 */
 	public void setTaskName(String taskName) {
 		this.taskName = taskName;
 	}
+
 	/**
 	 * @return the takDescription
 	 */
 	public String getTakDescription() {
 		return takDescription;
 	}
+
 	/**
-	 * @param takDescription the takDescription to set
+	 * @param takDescription
+	 *            the takDescription to set
 	 */
 	public void setTakDescription(String takDescription) {
 		this.takDescription = takDescription;
 	}
-	/* (non-Javadoc)
+
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override

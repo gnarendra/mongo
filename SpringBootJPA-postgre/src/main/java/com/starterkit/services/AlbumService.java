@@ -21,7 +21,6 @@ public class AlbumService {
 	@Autowired
 	private JpaAlbumRepository jpaAlbumRepository;
 
-	
 	/**
 	 * Getting all albums from DB
 	 * 
@@ -32,7 +31,7 @@ public class AlbumService {
 	}
 
 	/**
-	 * removing albums from the List
+	 * Removing albums from the List
 	 * 
 	 * @param albumId
 	 */
@@ -73,7 +72,7 @@ public class AlbumService {
 	 * @param releaseYear
 	 * @return
 	 */
-	public boolean EditAlbum(String id, String title, String artist, String releaseYear) {
+	public boolean editAlbum(String id, String title, String artist, String releaseYear) {
 		Album album = new Album(title, artist, releaseYear);
 		album.setId(id);
 		Album savedAlbum = jpaAlbumRepository.save(album);

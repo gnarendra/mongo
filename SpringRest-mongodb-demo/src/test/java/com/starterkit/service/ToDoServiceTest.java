@@ -47,14 +47,9 @@ public class ToDoServiceTest {
 		ToDo breakfastToDo = new ToDo("breakfast", "Eat like a king");
 		breakfastToDo.setId("breakfastId");
 		when(toDoRepository.save(any(ToDo.class))).thenReturn(breakfastToDo);
-		// doNothing().when(toDoRepository).save(any(ToDo.class));
 		boolean flag = toDoService.saveTask("breakfast", "Eat like a king");
 		Assert.assertTrue(flag);
 
-		/*
-		 * Verify that dao.saveEmployee was indeed called one time.
-		 */
-		// verify(toDoRepository, times(1)).save(captor.capture());
 	}
 
 	@Test
@@ -77,7 +72,6 @@ public class ToDoServiceTest {
 		ToDo breakfastToDo = new ToDo("breakfast", "Eat like a king");
 		breakfastToDo.setId("breakfastId");
 		when(toDoRepository.save(any(ToDo.class))).thenReturn(breakfastToDo);
-		// doNothing().when(toDoRepository).save(any(ToDo.class));
 		boolean flag = toDoService.editTask("breakfastId", "breakfast", "Eat like a king");
 
 		Assert.assertTrue(flag);

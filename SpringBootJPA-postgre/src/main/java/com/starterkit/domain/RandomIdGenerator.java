@@ -1,4 +1,4 @@
-package  com.starterkit.domain;
+package com.starterkit.domain;
 
 import org.hibernate.HibernateException;
 import org.hibernate.engine.spi.SessionImplementor;
@@ -12,15 +12,24 @@ import java.util.UUID;
  *
  */
 public class RandomIdGenerator implements IdentifierGenerator {
-    /* (non-Javadoc)
-     * @see org.hibernate.id.IdentifierGenerator#generate(org.hibernate.engine.spi.SessionImplementor, java.lang.Object)
-     */
-    @Override
-    public Serializable generate(SessionImplementor session, Object object) throws HibernateException {
-        return generateId();
-    }
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.hibernate.id.IdentifierGenerator#generate(org.hibernate.engine.spi.
+	 * SessionImplementor, java.lang.Object)
+	 */
+	@Override
+	public Serializable generate(SessionImplementor session, Object object) throws HibernateException {
+		return generateId();
+	}
 
-    public String generateId() {
-        return UUID.randomUUID().toString();
-    }
+	/**
+	 * returning random id
+	 * 
+	 * @return
+	 */
+	public String generateId() {
+		return UUID.randomUUID().toString();
+	}
 }
