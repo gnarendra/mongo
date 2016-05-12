@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author Anand.Kittappa@cognizant.com
- *
+ * This class is loading all the required beans
  */
 
 @SpringBootApplication
