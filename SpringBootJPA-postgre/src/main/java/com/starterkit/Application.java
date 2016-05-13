@@ -20,7 +20,7 @@ public class Application implements CommandLineRunner {
 	 * 
 	 * @param args
 	 */
-	public static void main(String[] args) throws Exception {
+	public static void main(String args[]) throws Exception {
 		// TODO Auto-generated method stub
 		SpringApplication.run(new Object[] { Application.class }, args);
 	}
