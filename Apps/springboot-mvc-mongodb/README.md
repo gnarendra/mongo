@@ -1,7 +1,9 @@
 
 ## About the App
 
-  The purpose of this app is to demonstrate the usage of Spring BOOT framework along with MongoDB, in a cloud native way. Through this app, we try to illustrate the PaaS specific behaviors, like, handling of VCAP services, etc.
+  The purpose of this app is to demonstrate the usage of Spring BOOT framework along with MongoDB, in a cloud native way. 
+  
+  Through this app, we try to illustrate the PaaS specific behaviors, like, handling of VCAP services, etc. A developer using this app, can use this starter kit app as a reference, and he can proceed to develop his application on top of this, thus, making things easy for the developer.
 
   This is an application which does Person Management functionality. User can add a person, which will be added to his person list. User can read the person list, edit any of the person in the person list. User can delete any of his person in the person list.
   
@@ -89,3 +91,18 @@ $ cf restage <APPNAME>
   
 # Code Analysis
   Code analysis tools like PMD, Findbugs can be run on the code. Simple way, is to, add these plugins to the IDE, and then generate the report from the IDE.
+
+# Package Description
+
+  The App has the below prominent layers:
+  Controller: Acting as a routing layer to receive incoming requests
+  Service: Acting as a layer to handle the business logic
+  Repositories: Acting as a layer to handle database connection
+  Domain: A POJO object to hold the domain data
+
+  
+# VCAP Parsing for DB connection details
+ - JpaRepository provided by Spring handles the VCAP parsing for DB connection details, of MySQL and Postgresql
+ - MongoRepository provided by MongoDB handles the VCAP parsing for DB connection details, of MongoDB
+ - Spring Boot usage in collaboration with the above Repository classes, abstracts the DB connection details parsing from the developer, thus reducing considerable effort for the developer
+
