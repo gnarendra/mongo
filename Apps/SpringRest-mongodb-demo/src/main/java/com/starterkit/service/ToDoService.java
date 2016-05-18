@@ -37,8 +37,8 @@ public class ToDoService {
 	 * @param taskName
 	 * @param taskDescription
 	 */
-	public boolean saveTask(String taskName,String taskDescription){
-		ToDo todo = new ToDo(taskName, taskDescription);
+	public boolean saveTask(String taskName){
+		ToDo todo = new ToDo(taskName);
 		ToDo savedTodo = toDoRepository.save(todo);
 		return todo.getTaskName().equalsIgnoreCase(savedTodo.getTaskName())?true:false;
 	}
@@ -48,8 +48,8 @@ public class ToDoService {
 	 * @param taskName
 	 * @param taskDescription
 	 */
-	public boolean editTask(String taskId,String taskName,String taskDescription){
-		ToDo todo = new ToDo(taskName, taskDescription);
+	public boolean editTask(String taskId,String taskName){
+		ToDo todo = new ToDo(taskName);
 		todo.setId(taskId);
 		ToDo savedTodo = toDoRepository.save(todo);
 		return todo.getId().equalsIgnoreCase(savedTodo.getId())?true:false;

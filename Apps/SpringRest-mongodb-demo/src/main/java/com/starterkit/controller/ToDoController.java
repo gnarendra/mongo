@@ -1,6 +1,7 @@
 package com.starterkit.controller;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -13,10 +14,9 @@ import org.springframework.web.servlet.ModelAndView;
 import com.starterkit.domain.ToDo;
 import com.starterkit.service.ToDoService;
 
-
 /**
  * @author Anand.Kittappa@cognizant.com Reset controller class for provide
- *                service to incoming request
+ *         service to incoming request
  */
 @RestController
 public class ToDoController {
@@ -25,28 +25,32 @@ public class ToDoController {
 	private ToDoService toDoService;
 
 	/**
-	 * Get the list task while application start up
+	 * Default welcome file
 	 * 
 	 * @param model
 	 * @return todo.html
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView getAllTask(Model model) {
-		return new ModelAndView("todo", "tasks", toDoService.getAllTask());
+		ModelAndView view = new ModelAndView();
+		view.setViewName("todo");
+		return view;
 	}
 
 	/**
-	 * Creating a new Task
+	 * List down all tasks
 	 * 
 	 * @param model
-	 * @return addtask.html
+	 * @return albums
 	 */
-	@RequestMapping(value = "/CreateTask", method = RequestMethod.GET)
-	public ModelAndView createTask(Model model) {
-		ToDo todo = new ToDo();
-		return new ModelAndView("addTask", "ToDo", todo);
+	@RequestMapping(value = "/tasks", method = RequestMethod.GET)
+	public List<ToDo> listTasks(Model model) {
+		List<ToDo> tasks = (List<ToDo>) toDoService.getAllTask();
+		return tasks;
+
 	}
 
+	
 	/**
 	 * Get the input from user and add the task to DB
 	 * 
@@ -55,15 +59,13 @@ public class ToDoController {
 	 * @param model
 	 * @return todo.html
 	 */
-	@RequestMapping(value = "/addTodo", method = RequestMethod.POST)
-	public ModelAndView addTask(@RequestParam(value = "TName") String taskName,
-			@RequestParam(value = "Tdescription") String taskDescription, Model model) {
-
-		if (toDoService.saveTask(taskName, taskDescription)) {
-			return new ModelAndView("todo", "tasks", toDoService.getAllTask());
-		} else {
-			return new ModelAndView("todo", "tasks", new ArrayList<>());
-		}
+	@RequestMapping(value = "/createTask", method = RequestMethod.POST)
+	public List<ToDo> addTask(@RequestParam(value = "taskName") String taskName,
+			Model model) {
+		toDoService.saveTask(taskName);
+		List<ToDo> tasks = (List<ToDo>) toDoService.getAllTask();
+		return tasks;
+			
 	}
 
 	/**
@@ -75,15 +77,12 @@ public class ToDoController {
 	 * @param model
 	 * @return todo.html
 	 */
-	@RequestMapping(value = "/editTodo", method = RequestMethod.POST)
-	public ModelAndView editTodo(@RequestParam(value = "TName") String taskName,
-			@RequestParam(value = "Tdescription") String taskDescription, @RequestParam("id") String id, Model model) {
-
-		if (toDoService.editTask(id, taskName, taskDescription)) {
-			return new ModelAndView("todo", "tasks", toDoService.getAllTask());
-		} else {
-			return new ModelAndView("todo", "tasks", new ArrayList<>());
-		}
+	@RequestMapping(value = "/editTask", method = RequestMethod.POST)
+	public List<ToDo> editTodo(@RequestParam(value = "taskName") String taskName,
+			@RequestParam("id") String id, Model model) {
+		toDoService.editTask(id, taskName);
+		List<ToDo> tasks = (List<ToDo>) toDoService.getAllTask();
+		return tasks;
 	}
 
 	/**
@@ -94,21 +93,12 @@ public class ToDoController {
 	 * @return todo.html
 	 */
 	@RequestMapping(value = "/deleteTask", method = RequestMethod.GET)
-	public ModelAndView deleteTask(@RequestParam("id") String id, Model model) {
+	public List<ToDo> deleteTask(@RequestParam("id") String id, Model model) {
 		toDoService.removetask(id);
-		return new ModelAndView("todo", "tasks", toDoService.getAllTask());
+		List<ToDo> tasks = (List<ToDo>) toDoService.getAllTask();
+		return tasks;
 	}
 
-	/**
-	 * forward edit request to html page
-	 * 
-	 * @param id
-	 * @param model
-	 * @return edittask.html
-	 */
-	@RequestMapping(value = "/EditTask", method = RequestMethod.GET)
-	public ModelAndView editTask(@RequestParam(value = "id", required = true) String id, Model model) {
-		return new ModelAndView("editTask", "ToDo", toDoService.getTask(id));
-	}
+	
 
 }

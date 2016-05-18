@@ -6,7 +6,7 @@ package com.starterkit.domain;
 import org.springframework.data.annotation.Id;
 
 /**
- * @author SecureBrowser
+ * @author Anand.Kittappa@cognizant.com
  *
  */
 public class ToDo {
@@ -16,9 +16,8 @@ public class ToDo {
 	 * @param taskName
 	 * @param takDescription
 	 */
-	public ToDo(String taskName, String takDescription) {
+	public ToDo(String taskName) {
 		this.taskName = taskName;
-		this.takDescription = takDescription;
 	}
 
 	/**
@@ -31,7 +30,6 @@ public class ToDo {
 	private String id;
 
 	private String taskName;
-	private String takDescription;
 
 	/**
 	 * @return the id
@@ -63,20 +61,7 @@ public class ToDo {
 		this.taskName = taskName;
 	}
 
-	/**
-	 * @return the takDescription
-	 */
-	public String getTakDescription() {
-		return takDescription;
-	}
 
-	/**
-	 * @param takDescription
-	 *            the takDescription to set
-	 */
-	public void setTakDescription(String takDescription) {
-		this.takDescription = takDescription;
-	}
 
 	/*
 	 * (non-Javadoc)
@@ -85,6 +70,6 @@ public class ToDo {
 	 */
 	@Override
 	public String toString() {
-		return "ToDo [id=" + id + ", taskName=" + taskName + ", takDescription=" + takDescription + "]";
+		return "ToDo [id=" + id + ", taskName=" + taskName + "]";
 	}
 }

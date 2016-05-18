@@ -1,8 +1,8 @@
 applications:
-- name: SpringRestMongoTestApp
+- name: SpringRestMongoTestApplication
   memory: 400M
   instances: 1
-  host: SpringRestMongoTestApp
+  host: SpringRestMongoTestApplication
   buildpack: java_buildpack
   path: ./target/Restmongoinstance-0.1.jar
 

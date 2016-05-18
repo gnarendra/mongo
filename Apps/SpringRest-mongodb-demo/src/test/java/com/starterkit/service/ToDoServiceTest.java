@@ -44,21 +44,21 @@ public class ToDoServiceTest {
 
 	@Test
 	public void saveTasktest() {
-		ToDo breakfastToDo = new ToDo("breakfast", "Eat like a king");
+		ToDo breakfastToDo = new ToDo("breakfast");
 		breakfastToDo.setId("breakfastId");
 		when(toDoRepository.save(any(ToDo.class))).thenReturn(breakfastToDo);
-		boolean flag = toDoService.saveTask("breakfast", "Eat like a king");
+		boolean flag = toDoService.saveTask("breakfast");
 		Assert.assertTrue(flag);
 
 	}
 
 	@Test
 	public void getAllTasktest() {
-		ToDo breakfastToDo = new ToDo("breakfast", "Eat like a king");
+		ToDo breakfastToDo = new ToDo("breakfast");
 		breakfastToDo.setId("breakfastId");
-		ToDo lunchToDo = new ToDo("lunch", "Eat like a queen");
+		ToDo lunchToDo = new ToDo("lunch");
 		lunchToDo.setId("lunchId");
-		ToDo dinnerToDo = new ToDo("dinner", "Eat like a princess");
+		ToDo dinnerToDo = new ToDo("dinner");
 		dinnerToDo.setId("dinnerId");
 		taskList.add(breakfastToDo);
 		taskList.add(lunchToDo);
@@ -69,17 +69,17 @@ public class ToDoServiceTest {
 
 	@Test
 	public void editTasktest() {
-		ToDo breakfastToDo = new ToDo("breakfast", "Eat like a king");
+		ToDo breakfastToDo = new ToDo("breakfast");
 		breakfastToDo.setId("breakfastId");
 		when(toDoRepository.save(any(ToDo.class))).thenReturn(breakfastToDo);
-		boolean flag = toDoService.editTask("breakfastId", "breakfast", "Eat like a king");
+		boolean flag = toDoService.editTask("breakfastId", "breakfast");
 
 		Assert.assertTrue(flag);
 	}
 
 	@Test
 	public void getTasktest() {
-		ToDo breakfastToDo = new ToDo("breakfast", "Eat like a king");
+		ToDo breakfastToDo = new ToDo("breakfast");
 		breakfastToDo.setId("breakfastId");
 		when(toDoRepository.findOne("breakfastId")).thenReturn(breakfastToDo);
 		Assert.assertEquals(toDoService.getTask("breakfastId"), breakfastToDo);
