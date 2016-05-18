@@ -8,15 +8,16 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @author Anand.Kittappa@cognizant.com
- * This class is loading all the required beans
+ * @author Anand.Kittappa@cognizant.com This is a Spring boot application class
+ *         which implements a CommandLineRunner. This class will create and load
+ *         all the required beans during runtime
  */
 
 @SpringBootApplication
 public class Application implements CommandLineRunner {
 
 	/**
-	 * Loading all beans for this application
+	 * Loading all the required beans for this demo application
 	 * 
 	 * @param args
 	 */
