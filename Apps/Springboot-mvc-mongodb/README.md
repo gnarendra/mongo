@@ -5,7 +5,7 @@
   
   Through this app, we try to illustrate the PaaS specific behaviors, like, handling of VCAP services, etc. A developer using this app, can use this starter kit app as a reference, and he can proceed to develop his application on top of this, thus, making things easy for the developer.
 
-  This is an application which does Employee Management functionality. User can add a Employee, which will be added to his Employee list. User can read the list of his Employee’s, edit any of the Employees in the Employee list. User can delete any of his Employees in the Employee list.
+  This is an application which does Employee Management functionality. User can add a Employee, which will be added into the Employee list. User can read the list of his Employees, edit any of the Employee in the Employee list. User can delete a Employee in the Employee list.
   
 # About the Framework - Spring BOOT
 
