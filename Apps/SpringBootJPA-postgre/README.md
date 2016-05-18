@@ -53,31 +53,31 @@
 
   - For Pivotal CF login follow the below CLI command :
 ```sh
-cf login -a api.run.pivotal.io
+  $ cf login -a api.run.pivotal.io
 ```
   - For IBM Bluemix CF login follow the below CLI command :
 ```sh
-$ cf login -a api.ng.bluemix.net
+  $ cf login -a api.ng.bluemix.net
 ```
 
 - Push the app :
 ```sh
-$ cf push <APPNAME> --no-start
+  $ cf push <APPNAME> --no-start
 ```
  - Create a DB service :
 
 ```sh
-$ cf create-service <SERVICE> <PLAN> <SERVICE_INSTANCE>
+  $ cf create-service <SERVICE> <PLAN> <SERVICE_INSTANCE>
 ```
  - Bind the service to the app :
 
 ```sh
-$ cf bind-service <YOUR-APP> <YOUR-SERVICE-INSTANCE>
+  $ cf bind-service <YOUR-APP> <YOUR-SERVICE-INSTANCE>
 ```
  - Restage the the app :
 
 ```sh
-$ cf restage <APPNAME>
+  $ cf restage <APPNAME>
 ```
 # Unit test case execution
 
