@@ -8,20 +8,20 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @author ismailibrahim.s@cognizant.com
- *
+ * @author ismailibrahim.s@cognizant.com This is a Spring boot application class
+ *         which implements a CommandLineRunner. This class will create and load
+ *         all the required beans during runtime
  */
 @SpringBootApplication
 public class Application implements CommandLineRunner {
 
 	/**
-	 * loading all beans for this application
+	 * Loading all the required beans for this demo application
 	 * 
-	 * @param args
+	 * @param args[]
 	 */
 	public static void main(String[] args) throws Exception {
-		// TODO Auto-generated method stub
-		SpringApplication.run(new Object[] { Application.class }, args);
+				SpringApplication.run(new Object[] { Application.class }, args);
 	}
 
 	/*

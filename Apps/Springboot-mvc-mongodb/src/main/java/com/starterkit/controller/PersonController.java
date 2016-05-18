@@ -17,14 +17,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.starterkit.domain.Person;
 import com.starterkit.dto.PersonDTO;
 import com.starterkit.repository.PersonRepository;
+
 /**
- * @author ismailibrahim.s@cognizant.com Controller class for provide service to
- *         incoming request
+ * @author ismailibrahim.s@cognizant.com This person Controller class for
+ *         providing service to incoming client requests
  */
+
 @Controller
 @RequestMapping("/person")
 public class PersonController {
-	
+
 	@Autowired
 	private PersonRepository personRepository;
 
@@ -48,10 +50,12 @@ public class PersonController {
 	}
 
 	/**
-	 * List the personlist
+	 * This method maps to GET type of HTTP request with /personlist URL. Get
+	 * the list of Person from DB by calling the getAllPerson service. Send the
+	 * person list as a response
 	 * 
 	 * @param model
-	 * @return persons.html
+	 * @return personlist
 	 */
 
 	@RequestMapping(value = "/personlist", method = RequestMethod.GET)
@@ -60,10 +64,13 @@ public class PersonController {
 	}
 
 	/**
-	 * Delete the person
+	 * This method maps to GET type of HTTP request with /deletePerson URL. Get
+	 * the inputs from user via requestparam and delete the person from DB by
+	 * calling deletePerson service. Send the task list as a response
 	 * 
+	 * @param id
 	 * @param model
-	 * @return persons.html
+	 * @return index.html
 	 */
 
 	@RequestMapping(value = "/deletePerson", method = RequestMethod.GET)
@@ -73,15 +80,20 @@ public class PersonController {
 	}
 
 	/**
-	 * Edit the person
+	 * This method maps to POST type of HTTP request with /editPerson URL. Get
+	 * the inputs from user via requestparam and update the person into DB by
+	 * calling editPerson service. Send the task list as a response
 	 * 
-	 * @param fName
-	 * @param lName
-	 * @return editPerson.html
+	 * @param firstName
+	 * @param lastName
+	 * @param id
+	 * @param model
+	 * @return index.html
 	 */
 	@RequestMapping(value = "/editPerson", method = RequestMethod.POST)
-	public @ResponseBody List<Person> editPerson(@RequestParam(value = "firstName") String firstName, @RequestParam(value = "lastName") String lastName,
-			@RequestParam(value = "id", required = true) String id, Model model) {
+	public @ResponseBody List<Person> editPerson(@RequestParam(value = "firstName") String firstName,
+			@RequestParam(value = "lastName") String lastName, @RequestParam(value = "id", required = true) String id,
+			Model model) {
 
 		Person person = new Person(firstName, lastName);
 		person.setId(id);
@@ -90,21 +102,23 @@ public class PersonController {
 	}
 
 	/**
-	 * Add the person
+	 * This method maps to POST type of HTTP request with /addPerson URL. Get
+	 * the inputs from user via requestparam and save the person into DB by
+	 * calling save service. Send the task list as a response
 	 * 
-	 * @param fName
-	 * @param lName
-	 * @return persons.html
+	 * @param firstName
+	 * @param lastName
+	 * @param model
+	 * @return index.html
 	 */
 
 	@RequestMapping(value = "/addPerson", method = RequestMethod.POST)
-	public @ResponseBody List<Person> addPerson(@RequestParam(value = "firstName") String firstName, @RequestParam(value = "lastName") String lastName,
-			Model model) {
+	public @ResponseBody List<Person> addPerson(@RequestParam(value = "firstName") String firstName,
+			@RequestParam(value = "lastName") String lastName, Model model) {
 
-	Person person = new Person(firstName, lastName);
+		Person person = new Person(firstName, lastName);
 		personRepository.save(person);
 		return getAllPersons();
 	}
-	
 
 }
