@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>techm.cisco.demo</groupId>
-	<artifactId>springboot-MongoDb-demo</artifactId>
+	<artifactId>SBMongoDbdemoApplication</artifactId>
 	<version>0.1</version>
 	<name>Spring Boot MVC REST Mongo DB Demo</name>
 	<parent>
@@ -13,7 +13,6 @@
 
 	<properties>
 		<java.version>1.8</java.version>
-		<jackson.version>1.9.10</jackson.version>
 	</properties>
 
 	<dependencies>
@@ -48,18 +47,21 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 		</dependency>
-		<!-- Jackson JSON Mapper -->
-		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-mapper-asl</artifactId>
-			<version>${jackson.version}</version>
-		</dependency>
+
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-all</artifactId>
 			<version>1.10.19</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- Jackson JSON Mapper -->
+		<!-- http://mvnrepository.com/artifact/org.codehaus.jackson/jackson-mapper-asl -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.13</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

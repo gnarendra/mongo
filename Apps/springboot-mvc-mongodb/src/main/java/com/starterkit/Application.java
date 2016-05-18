@@ -15,7 +15,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Application implements CommandLineRunner {
 
 	/**
-	 * Loading all beans for this application
+	 * loading all beans for this application
 	 * 
 	 * @param args
 	 */

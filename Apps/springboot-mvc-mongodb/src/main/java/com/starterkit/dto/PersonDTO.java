@@ -24,7 +24,7 @@ public class PersonDTO {
 	}
 
 	/**
-	 * @return id
+	 * @return the id
 	 */
 	public String getId() {
 		return id;
@@ -32,13 +32,14 @@ public class PersonDTO {
 
 	/**
 	 * @param id
+	 *            the id to set
 	 */
 	public void setId(String id) {
 		this.id = id;
 	}
 
 	/**
-	 * @return firstName
+	 * @return the firstName
 	 */
 	public String getFirstName() {
 		return firstName;
@@ -46,13 +47,14 @@ public class PersonDTO {
 
 	/**
 	 * @param firstName
+	 *            the firstName to set
 	 */
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
 
 	/**
-	 * @return lastName
+	 * @return the lastName
 	 */
 	public String getLastName() {
 		return lastName;
@@ -60,6 +62,7 @@ public class PersonDTO {
 
 	/**
 	 * @param lastName
+	 *            the lastName to set
 	 */
 	public void setLastName(String lastName) {
 		this.lastName = lastName;

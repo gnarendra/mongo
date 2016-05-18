@@ -11,7 +11,7 @@ import com.starterkit.domain.Person;
 import com.starterkit.repository.PersonRepository;
 
 /**
- * @author ismailibrahim.s@cognizant.com
+ * @author admin
  *
  */
 public class PersonService {

@@ -18,8 +18,8 @@ import com.starterkit.domain.Person;
 import com.starterkit.dto.PersonDTO;
 import com.starterkit.repository.PersonRepository;
 /**
- * @author ismailibrahim.s@cognizant.com 
- *         Controller class for providing service to incoming request
+ * @author ismailibrahim.s@cognizant.com Controller class for provide service to
+ *         incoming request
  */
 @Controller
 @RequestMapping("/person")
@@ -29,7 +29,7 @@ public class PersonController {
 	private PersonRepository personRepository;
 
 	@RequestMapping(method = RequestMethod.POST)
-	public @ResponseBody Person createPerson(@RequestBody PersonDTO personDTO) {
+	public Person createPerson(@RequestBody PersonDTO personDTO) {
 		Person person = null;
 		if (null != personDTO) {
 			person = new Person();
@@ -41,7 +41,7 @@ public class PersonController {
 		return person;
 	}
 
-	public @ResponseBody List<Person> getAllPersons() {
+	public List<Person> getAllPersons() {
 		List<Person> listOfPersons = null;
 		listOfPersons = personRepository.findAll();
 		return listOfPersons;
@@ -55,9 +55,8 @@ public class PersonController {
 	 */
 
 	@RequestMapping(value = "/personlist", method = RequestMethod.GET)
-	public String showPersonList(Model model) {
-		model.addAttribute("persons", personRepository.findAll());
-		return "persons";
+	public @ResponseBody List<Person> showPersonList(Model model) {
+		return getAllPersons();
 	}
 
 	/**
@@ -68,23 +67,9 @@ public class PersonController {
 	 */
 
 	@RequestMapping(value = "/deletePerson", method = RequestMethod.GET)
-	public String deletePerson(@RequestParam("id") String id, Model model) {
+	public @ResponseBody List<Person> deletePerson(@RequestParam("id") String id, Model model) {
 		personRepository.delete(id);
-		model.addAttribute("persons", personRepository.findAll());
-		return "persons";
-	}
-
-	/**
-	 * Edit the person
-	 * 
-	 * @param model
-	 * @return editPerson.html
-	 */
-	@RequestMapping(value = "/EditPerson", method = RequestMethod.GET)
-	public String editAlbum(@RequestParam(value = "id", required = true) String id, Model model) {
-		Person person = personRepository.findOne(id);
-		model.addAttribute("person", person);
-		return "editPerson";
+		return getAllPersons();
 	}
 
 	/**
@@ -94,15 +79,14 @@ public class PersonController {
 	 * @param lName
 	 * @return editPerson.html
 	 */
-	@RequestMapping(value = "/EditPerson", method = RequestMethod.POST)
-	public String editPerson(@RequestParam(value = "fName") String fName, @RequestParam(value = "lName") String lName,
+	@RequestMapping(value = "/editPerson", method = RequestMethod.POST)
+	public @ResponseBody List<Person> editPerson(@RequestParam(value = "firstName") String firstName, @RequestParam(value = "lastName") String lastName,
 			@RequestParam(value = "id", required = true) String id, Model model) {
 
-		Person person = new Person(fName, lName);
+		Person person = new Person(firstName, lastName);
 		person.setId(id);
 		personRepository.save(person);
-		model.addAttribute("persons", personRepository.findAll());
-		return "persons";
+		return getAllPersons();
 	}
 
 	/**
@@ -114,26 +98,13 @@ public class PersonController {
 	 */
 
 	@RequestMapping(value = "/addPerson", method = RequestMethod.POST)
-	public String addPerson(@RequestParam(value = "fName") String fName, @RequestParam(value = "lName") String lName,
+	public @ResponseBody List<Person> addPerson(@RequestParam(value = "firstName") String firstName, @RequestParam(value = "lastName") String lastName,
 			Model model) {
 
-	Person person = new Person(fName, lName);
+	Person person = new Person(firstName, lastName);
 		personRepository.save(person);
-		model.addAttribute("persons", personRepository.findAll());
-		return "persons";
+		return getAllPersons();
 	}
-
-	/**
-	 * Forward to the createPerson page
-	 * 
-	 * @return createPerson.html
-	 */
-
-	@RequestMapping(value = "/CreatePerson", method = RequestMethod.GET)
-	public String addNewAlbum(Model model) {
-		Person person = new Person();
-		model.addAttribute("person", person);
-		return "createPerson";
-	}
+	
 
 }
