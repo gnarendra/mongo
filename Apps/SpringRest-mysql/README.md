@@ -55,11 +55,11 @@
 ## Using Command line tool: 
   - Install the Cloud Foundry command line tool
 
-  - For Pivotal CF follow the below CLI command :
+  - For Pivotal CF login follow the below CLI command :
 ```sh
   $ cf login -a api.run.pivotal.io
 ```
-  - For IBM Bluemix CF follow the below CLI command :
+  - For IBM Bluemix CF login follow the below CLI command :
 ```sh
   $ cf login -a api.ng.bluemix.net
 ```
