@@ -1,0 +1,128 @@
+src/main/java/com/starterkit/Application.java:22:	A method/constructor shouldnt explicitly throw java.lang.Exception
+src/main/java/com/starterkit/Application.java:22:	Consider using varargs for methods or constructors which take an array the last parameter.
+src/main/java/com/starterkit/Application.java:22:	Parameter 'args' is not assigned and could be declared final
+src/main/java/com/starterkit/Application.java:33:	A method/constructor shouldnt explicitly throw java.lang.Exception
+src/main/java/com/starterkit/Application.java:33:	Document empty method body
+src/main/java/com/starterkit/Application.java:33:	Parameter 'args' is not assigned and could be declared final
+src/main/java/com/starterkit/Application.java:33:	publicMethodCommentRequirement Required
+src/main/java/com/starterkit/controller/IndexController.java:11:	Each class should declare at least one constructor
+src/main/java/com/starterkit/controller/IndexController.java:12:	Use explicit scoping instead of the default package private level
+src/main/java/com/starterkit/controller/PersonController.java:6:	Avoid unused imports such as 'java.util.ArrayList'
+src/main/java/com/starterkit/controller/PersonController.java:26:	Each class should declare at least one constructor
+src/main/java/com/starterkit/controller/PersonController.java:29:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/com/starterkit/controller/PersonController.java:29:	fieldCommentRequirement Required
+src/main/java/com/starterkit/controller/PersonController.java:32:	Parameter 'personDTO' is not assigned and could be declared final
+src/main/java/com/starterkit/controller/PersonController.java:32:	publicMethodCommentRequirement Required
+src/main/java/com/starterkit/controller/PersonController.java:33:	Found 'DD'-anomaly for variable 'person' (lines '33'-'35').
+src/main/java/com/starterkit/controller/PersonController.java:36:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/com/starterkit/controller/PersonController.java:37:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/com/starterkit/controller/PersonController.java:44:	publicMethodCommentRequirement Required
+src/main/java/com/starterkit/controller/PersonController.java:45:	Found 'DD'-anomaly for variable 'listOfPersons' (lines '45'-'46').
+src/main/java/com/starterkit/controller/PersonController.java:58:	Parameter 'model' is not assigned and could be declared final
+src/main/java/com/starterkit/controller/PersonController.java:59:	The String literal "persons" appears 8 times in this file; the first occurrence is on line 59
+src/main/java/com/starterkit/controller/PersonController.java:71:	Avoid variables with short names like id
+src/main/java/com/starterkit/controller/PersonController.java:71:	Parameter 'id' is not assigned and could be declared final
+src/main/java/com/starterkit/controller/PersonController.java:71:	Parameter 'model' is not assigned and could be declared final
+src/main/java/com/starterkit/controller/PersonController.java:84:	Avoid variables with short names like id
+src/main/java/com/starterkit/controller/PersonController.java:84:	Parameter 'id' is not assigned and could be declared final
+src/main/java/com/starterkit/controller/PersonController.java:84:	Parameter 'model' is not assigned and could be declared final
+src/main/java/com/starterkit/controller/PersonController.java:85:	Local variable 'person' could be declared final
+src/main/java/com/starterkit/controller/PersonController.java:98:	Parameter 'fName' is not assigned and could be declared final
+src/main/java/com/starterkit/controller/PersonController.java:98:	Parameter 'lName' is not assigned and could be declared final
+src/main/java/com/starterkit/controller/PersonController.java:99:	Avoid variables with short names like id
+src/main/java/com/starterkit/controller/PersonController.java:99:	Parameter 'id' is not assigned and could be declared final
+src/main/java/com/starterkit/controller/PersonController.java:99:	Parameter 'model' is not assigned and could be declared final
+src/main/java/com/starterkit/controller/PersonController.java:101:	Local variable 'person' could be declared final
+src/main/java/com/starterkit/controller/PersonController.java:117:	Parameter 'fName' is not assigned and could be declared final
+src/main/java/com/starterkit/controller/PersonController.java:117:	Parameter 'lName' is not assigned and could be declared final
+src/main/java/com/starterkit/controller/PersonController.java:118:	Parameter 'model' is not assigned and could be declared final
+src/main/java/com/starterkit/controller/PersonController.java:120:	Local variable 'person' could be declared final
+src/main/java/com/starterkit/controller/PersonController.java:133:	Parameter 'model' is not assigned and could be declared final
+src/main/java/com/starterkit/controller/PersonController.java:134:	Local variable 'person' could be declared final
+src/main/java/com/starterkit/domain/Person.java:21:	Avoid variables with short names like id
+src/main/java/com/starterkit/domain/Person.java:23:	fieldCommentRequirement Required
+src/main/java/com/starterkit/domain/Person.java:24:	fieldCommentRequirement Required
+src/main/java/com/starterkit/domain/Person.java:26:	publicMethodCommentRequirement Required
+src/main/java/com/starterkit/domain/Person.java:30:	Parameter 'firstName' is not assigned and could be declared final
+src/main/java/com/starterkit/domain/Person.java:30:	Parameter 'lastName' is not assigned and could be declared final
+src/main/java/com/starterkit/domain/Person.java:30:	publicMethodCommentRequirement Required
+src/main/java/com/starterkit/domain/Person.java:45:	Avoid variables with short names like id
+src/main/java/com/starterkit/domain/Person.java:45:	Parameter 'id' is not assigned and could be declared final
+src/main/java/com/starterkit/domain/Person.java:59:	Parameter 'firstName' is not assigned and could be declared final
+src/main/java/com/starterkit/domain/Person.java:73:	Parameter 'lastName' is not assigned and could be declared final
+src/main/java/com/starterkit/domain/Person.java:83:	publicMethodCommentRequirement Required
+src/main/java/com/starterkit/domain/Person.java:84:	Local variable 'builder' could be declared final
+src/main/java/com/starterkit/domain/Person.java:84:	StringBuffer constructor is initialized with size 16, but has at least 35 characters appended.
+src/main/java/com/starterkit/domain/Person.java:85:	StringBuffer (or StringBuilder).append is called consecutively without reusing the target variable.
+src/main/java/com/starterkit/domain/Person.java:86:	StringBuffer (or StringBuilder).append is called consecutively without reusing the target variable.
+src/main/java/com/starterkit/domain/Person.java:87:	StringBuffer (or StringBuilder).append is called consecutively without reusing the target variable.
+src/main/java/com/starterkit/domain/Person.java:88:	StringBuffer (or StringBuilder).append is called consecutively without reusing the target variable.
+src/main/java/com/starterkit/domain/Person.java:89:	StringBuffer (or StringBuilder).append is called consecutively without reusing the target variable.
+src/main/java/com/starterkit/domain/Person.java:90:	StringBuffer (or StringBuilder).append is called consecutively without reusing the target variable.
+src/main/java/com/starterkit/domain/Person.java:91:	Avoid appending characters as strings in StringBuffer.append.
+src/main/java/com/starterkit/dto/PersonDTO.java:12:	Avoid variables with short names like id
+src/main/java/com/starterkit/dto/PersonDTO.java:12:	fieldCommentRequirement Required
+src/main/java/com/starterkit/dto/PersonDTO.java:14:	fieldCommentRequirement Required
+src/main/java/com/starterkit/dto/PersonDTO.java:15:	fieldCommentRequirement Required
+src/main/java/com/starterkit/dto/PersonDTO.java:17:	publicMethodCommentRequirement Required
+src/main/java/com/starterkit/dto/PersonDTO.java:21:	Parameter 'firstName' is not assigned and could be declared final
+src/main/java/com/starterkit/dto/PersonDTO.java:21:	Parameter 'lastName' is not assigned and could be declared final
+src/main/java/com/starterkit/dto/PersonDTO.java:21:	publicMethodCommentRequirement Required
+src/main/java/com/starterkit/dto/PersonDTO.java:36:	Avoid variables with short names like id
+src/main/java/com/starterkit/dto/PersonDTO.java:36:	Parameter 'id' is not assigned and could be declared final
+src/main/java/com/starterkit/dto/PersonDTO.java:50:	Parameter 'firstName' is not assigned and could be declared final
+src/main/java/com/starterkit/dto/PersonDTO.java:64:	Parameter 'lastName' is not assigned and could be declared final
+src/main/java/com/starterkit/service/PersonService.java:17:	Each class should declare at least one constructor
+src/main/java/com/starterkit/service/PersonService.java:20:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/com/starterkit/service/PersonService.java:20:	fieldCommentRequirement Required
+src/main/java/com/starterkit/service/PersonService.java:22:	Parameter 'firstName' is not assigned and could be declared final
+src/main/java/com/starterkit/service/PersonService.java:22:	Parameter 'lastName' is not assigned and could be declared final
+src/main/java/com/starterkit/service/PersonService.java:22:	publicMethodCommentRequirement Required
+src/main/java/com/starterkit/service/PersonService.java:23:	Local variable 'person' could be declared final
+src/main/java/com/starterkit/service/PersonService.java:26:	publicMethodCommentRequirement Required
+src/main/java/com/starterkit/service/PersonService.java:29:	Avoid variables with short names like id
+src/main/java/com/starterkit/service/PersonService.java:29:	Parameter 'id' is not assigned and could be declared final
+src/main/java/com/starterkit/service/PersonService.java:29:	publicMethodCommentRequirement Required
+src/main/java/com/starterkit/service/PersonService.java:32:	Avoid variables with short names like id
+src/main/java/com/starterkit/service/PersonService.java:32:	Parameter 'id' is not assigned and could be declared final
+src/main/java/com/starterkit/service/PersonService.java:32:	publicMethodCommentRequirement Required
+src/main/java/com/starterkit/service/PersonService.java:35:	Avoid variables with short names like id
+src/main/java/com/starterkit/service/PersonService.java:35:	Parameter 'firstName' is not assigned and could be declared final
+src/main/java/com/starterkit/service/PersonService.java:35:	Parameter 'id' is not assigned and could be declared final
+src/main/java/com/starterkit/service/PersonService.java:35:	Parameter 'lastName' is not assigned and could be declared final
+src/main/java/com/starterkit/service/PersonService.java:35:	publicMethodCommentRequirement Required
+src/main/java/com/starterkit/service/PersonService.java:36:	Local variable 'person' could be declared final
+src/main/java/com/starterkit/service/PersonService.java:38:	Local variable 'editedPerson' could be declared final
+src/main/java/com/starterkit/service/PersonService.java:39:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/com/starterkit/service/PersonServiceTest.java:18:	Avoid unused imports such as 'org.mockito.internal.matchers.Any'
+src/test/java/com/starterkit/service/PersonServiceTest.java:20:	Avoid unused imports such as 'com.fasterxml.jackson.databind.ser.AnyGetterWriter'
+src/test/java/com/starterkit/service/PersonServiceTest.java:28:	Each class should declare at least one constructor
+src/test/java/com/starterkit/service/PersonServiceTest.java:32:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/com/starterkit/service/PersonServiceTest.java:32:	fieldCommentRequirement Required
+src/test/java/com/starterkit/service/PersonServiceTest.java:35:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/com/starterkit/service/PersonServiceTest.java:35:	fieldCommentRequirement Required
+src/test/java/com/starterkit/service/PersonServiceTest.java:37:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/java/com/starterkit/service/PersonServiceTest.java:37:	Private field 'personList' could be made final; it is only initialized in the declaration or constructor.
+src/test/java/com/starterkit/service/PersonServiceTest.java:37:	fieldCommentRequirement Required
+src/test/java/com/starterkit/service/PersonServiceTest.java:39:	publicMethodCommentRequirement Required
+src/test/java/com/starterkit/service/PersonServiceTest.java:43:	publicMethodCommentRequirement Required
+src/test/java/com/starterkit/service/PersonServiceTest.java:44:	Local variable 'person' could be declared final
+src/test/java/com/starterkit/service/PersonServiceTest.java:44:	The String literal "Dravid" appears 6 times in this file; the first occurrence is on line 44
+src/test/java/com/starterkit/service/PersonServiceTest.java:44:	The String literal "Rahul" appears 6 times in this file; the first occurrence is on line 44
+src/test/java/com/starterkit/service/PersonServiceTest.java:45:	The String literal "RahulId" appears 7 times in this file; the first occurrence is on line 45
+src/test/java/com/starterkit/service/PersonServiceTest.java:46:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/com/starterkit/service/PersonServiceTest.java:47:	Local variable 'savedPerson' could be declared final
+src/test/java/com/starterkit/service/PersonServiceTest.java:48:	Potential violation of Law of Demeter (object not created locally)
+src/test/java/com/starterkit/service/PersonServiceTest.java:52:	publicMethodCommentRequirement Required
+src/test/java/com/starterkit/service/PersonServiceTest.java:53:	Local variable 'person' could be declared final
+src/test/java/com/starterkit/service/PersonServiceTest.java:55:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/com/starterkit/service/PersonServiceTest.java:60:	publicMethodCommentRequirement Required
+src/test/java/com/starterkit/service/PersonServiceTest.java:61:	Local variable 'person' could be declared final
+src/test/java/com/starterkit/service/PersonServiceTest.java:63:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/com/starterkit/service/PersonServiceTest.java:68:	publicMethodCommentRequirement Required
+src/test/java/com/starterkit/service/PersonServiceTest.java:69:	Local variable 'person' could be declared final
+src/test/java/com/starterkit/service/PersonServiceTest.java:71:	Local variable 'person2' could be declared final
+src/test/java/com/starterkit/service/PersonServiceTest.java:73:	Local variable 'person3' could be declared final
+src/test/java/com/starterkit/service/PersonServiceTest.java:78:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/com/starterkit/service/PersonServiceTest.java:79:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/com/starterkit/service/PersonServiceTest.java:79:	Potential violation of Law of Demeter (method chain calls)

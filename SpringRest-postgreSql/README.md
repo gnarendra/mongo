@@ -1,1 +1,0 @@
-This application is developed using Spring REST controller and connects with PostgreSql DB with Angular js UI in JSP. This is a cloud native application, based on cloud foundry standards. It has Junit test cases for it.
