@@ -25,7 +25,7 @@ public class ToDoService {
 	private ToDoRepository toDoRepository;
 	
 	/**
-	 * Get all the task from DB 
+	 * Get all the task from 'ToDo' collection by calling the findAll method
 	 * @return List of task
 	 */
 	public List<ToDo> getAllTask(){
@@ -33,7 +33,7 @@ public class ToDoService {
 	}
 	
 	/**
-	 * Save new task
+	 * Save new task into 'ToDo' collection by calling the save method
 	 * @param taskName
 	 * @param taskDescription
 	 */
@@ -43,7 +43,7 @@ public class ToDoService {
 		return todo.getTaskName().equalsIgnoreCase(savedTodo.getTaskName())?true:false;
 	}
 	/**
-	 * Edit the task based on task id
+	 * Updated the task into 'ToDo' collection by saving the task based on task id 
 	 * @param taskId
 	 * @param taskName
 	 * @param taskDescription
@@ -56,14 +56,14 @@ public class ToDoService {
 	}
 	
 	/**
-	 * Removing the task from task list
+	 * Remove the task from 'ToDo' collection by calling delete method
 	 * @param taskId
 	 */
 	public void removetask(String taskId){
 		toDoRepository.delete(taskId);
 	}
 	/**
-	 * Get the task based on task Id
+	 * Get a particular task from 'ToDo' collection by calling findOne method with task Id
 	 * @param taskId
 	 * @return
 	 */

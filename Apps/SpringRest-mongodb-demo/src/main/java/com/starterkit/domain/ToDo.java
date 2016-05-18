@@ -61,8 +61,6 @@ public class ToDo {
 		this.taskName = taskName;
 	}
 
-
-
 	/*
 	 * (non-Javadoc)
 	 * 
