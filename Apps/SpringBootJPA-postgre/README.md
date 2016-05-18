@@ -41,21 +41,21 @@
 
 # High level steps for deploying the application in PaaS
     
-  -  Using Eclipse: 
+## Using Eclipse: 
   - Install cloud foundry plugin in.
   - Login into your pivotal(api.run.pivotal.io)/bluemix(api.ng.bluemix.net) account
   - Drag and drop app to push an app into CF
   - Select and bind a service to your app 
   - Click finish button to complete your deployment
   
-  - Using Command line tool: 
+## Using Command line tool: 
   - Install the Cloud Foundry command line tool
 
-  - For Pivotal CF follow the below CLI command :
+  - For Pivotal CF login follow the below CLI command :
 ```sh
 cf login -a api.run.pivotal.io
 ```
-  - For IBM Bluemix CF follow the below CLI command :
+  - For IBM Bluemix CF login follow the below CLI command :
 ```sh
 $ cf login -a api.ng.bluemix.net
 ```
