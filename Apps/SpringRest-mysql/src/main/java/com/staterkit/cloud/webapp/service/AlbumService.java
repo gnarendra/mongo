@@ -23,7 +23,7 @@ public class AlbumService {
 
 	
 	/**
-	 * Getting all albums from DB
+	 * Get all the task from 'Album' Table by calling the findAll method
 	 * 
 	 * @return List of Albums
 	 */
@@ -32,7 +32,7 @@ public class AlbumService {
 	}
 
 	/**
-	 * removing albums from the List
+	 * Remove the task from 'Album' table by calling delete method
 	 * 
 	 * @param albumId
 	 */
@@ -43,7 +43,7 @@ public class AlbumService {
 	
 
 	/**
-	 * Save the albums
+	 * Save new task into 'Album' table by calling the save method
 	 * 
 	 * @param title
 	 * @param artist
@@ -57,7 +57,7 @@ public class AlbumService {
 	}
 
 	/**
-	 * Edit the albums
+	 * Updated the album into 'Album' table by saving the album based on album id
 	 * 
 	 * @param id
 	 * @param title
@@ -73,7 +73,7 @@ public class AlbumService {
 	}
 
 	/**
-	 * get album based on Id
+	 * Get a particular album from 'Album' table by calling findOne method with album Id
 	 * 
 	 * @param id
 	 * @return
