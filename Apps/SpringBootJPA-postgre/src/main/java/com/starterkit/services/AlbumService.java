@@ -60,7 +60,7 @@ public class AlbumService {
 	public boolean saveAlbum(String title, String artist, String releaseYear) {
 		Album album = new Album(title, artist, releaseYear);
 		Album savedAlbum = jpaAlbumRepository.save(album);
-		return album.getTitle() == savedAlbum.getTitle() ? true : false;
+		return album.getTitle().equalsIgnoreCase(savedAlbum.getTitle())? true : false;
 	}
 
 	/**
@@ -76,7 +76,7 @@ public class AlbumService {
 		Album album = new Album(title, artist, releaseYear);
 		album.setId(id);
 		Album savedAlbum = jpaAlbumRepository.save(album);
-		return album.getId() == savedAlbum.getId() ? true : false;
+		return album.getId().equalsIgnoreCase(savedAlbum.getId()) ? true : false;
 	}
 
 	/**

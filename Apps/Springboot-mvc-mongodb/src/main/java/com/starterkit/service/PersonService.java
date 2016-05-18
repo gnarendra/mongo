@@ -36,6 +36,6 @@ public class PersonService {
 		Person person= new Person(firstName, lastName);
 		person.setId(id);
 		Person editedPerson= personRepository.save(person);
-		return person.getId()==editedPerson.getId()?true:false;
+		return person.getId().equalsIgnoreCase(editedPerson.getId())?true:false;
 	}
 }
