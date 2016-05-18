@@ -61,7 +61,7 @@
 
   - For Pivotal CF follow the below CLI command :
 ```sh
-  $cf login -a api.run.pivotal.io
+  $ cf login -a api.run.pivotal.io
 ```
   - For IBM Bluemix CF follow the below CLI command :
 ```sh
