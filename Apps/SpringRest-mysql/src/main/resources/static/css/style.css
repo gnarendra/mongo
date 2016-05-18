@@ -22,3 +22,14 @@ body {
 	float: left;
 	width: 100%;
 }
+
+.headh {
+ 	width: 440px;
+ 	margin: 8px auto 0;
+ 	padding: 0;
+}
+
+.imgclass{
+	float: left;
+	border:0;
+}
