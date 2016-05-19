@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 <title>AngularJS + Spring Rest Sample App</title>
@@ -7,7 +8,7 @@
 	rel="stylesheet" media="screen" />
 </head>
 
-<body ng-app="myApp" class="ng-cloak">
+<body data-ng-app="myApp" class="ng-cloak">
 
 	<script src="../static/js/angular.min.js" th:src="@{js/angular.min.js}"></script>
 	<script src="../static/js/app.js" th:src="@{js/app.js}"></script>
@@ -21,27 +22,27 @@
 		<h1 class="headh">Java - Album Management</h1>
 	</div>
 	<div class="content">
-	<div class="generic-container" ng-controller="AppController as ctrl">
+	<div class="generic-container" data-ng-controller="AppController as ctrl">
 
 		<div class="panel-body">
 			<div class="task">
-				<form ng-submit="ctrl.submit()" name="myForm"
+				<form data-ng-submit="ctrl.submit()" name="myForm"
 					class="form-horizontal">
-					<input type="hidden" ng-model="ctrl.user.id" />
+					<input type="hidden" data-ng-model="ctrl.user.id" />
 					<table class="add-task">
 						<tr>
 							<td>TITLE:</td>
-							<td><input type="text" ng-model="ctrl.user.title" id="title"
+							<td><input type="text" data-ng-model="ctrl.user.title" id="title"
 								placeholder="Enter title name" /></td>
 						</tr>
 						<tr>
 							<td>Artist :</td>
-							<td><input type="text" ng-model="ctrl.user.artist"
+							<td><input type="text" data-ng-model="ctrl.user.artist"
 								id="artist" placeholder="Enter artist name" /></td>
 						</tr>
 						<tr>
 							<td>releaseYear:</td>
-							<td><input type="text" ng-model="ctrl.user.releaseYear"
+							<td><input type="text" data-ng-model="ctrl.user.releaseYear"
 								id="releaseYear" placeholder="Enter releaseYear" /></td>
 						</tr>
 
@@ -71,15 +72,15 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr ng-repeat="u in ctrl.users">
-							<td><span ng-bind="u.id"></span></td>
-							<td><span ng-bind="u.title"></span></td>
-							<td><span ng-bind="u.artist"></span></td>
-							<td><span ng-bind="u.releaseYear"></span></td>
+						<tr data-ng-repeat="u in ctrl.users">
+							<td><span data-ng-bind="u.id"></span></td>
+							<td><span data-ng-bind="u.title"></span></td>
+							<td><span data-ng-bind="u.artist"></span></td>
+							<td><span data-ng-bind="u.releaseYear"></span></td>
 							<td>
-								<button type="button" ng-click="ctrl.edit(u.id)"
+								<button type="button" data-ng-click="ctrl.edit(u.id)"
 									class="btn btn-success custom-width">Edit</button>
-								<button type="button" ng-click="ctrl.remove(u.id)"
+								<button type="button" data-ng-click="ctrl.remove(u.id)"
 									class="btn btn-danger custom-width">Remove</button>
 							</td>
 
