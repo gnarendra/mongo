@@ -48,8 +48,10 @@ App.controller('AppController', [
 			};
 
 			self.updateUser = function(user, id) {
-				var element = document.getElementById("edit");
-				element.classList.add("disabled");
+				var edit = document.getElementById("edit");
+				var add = document.getElementById("add");
+				edit.style.display = "none";
+				add.style.display ="block";
 				UserService.updateUser(user, id).then(self.fetchAllUsers,
 						function(errResponse) {
 							console.error('Error while updating User.');
@@ -75,8 +77,10 @@ App.controller('AppController', [
 			};
 
 			self.edit = function(id) {
-				var element = document.getElementById("edit");
-				element.classList.remove("disabled");
+				var edit = document.getElementById("edit");
+				var add = document.getElementById("add");
+				edit.style.display = "block";
+				add.style.display = "none";
 				console.log('id to be edited', id);
 				for (var i = 0; i < self.users.length; i++) {
 					if (self.users[i].id === id) {
