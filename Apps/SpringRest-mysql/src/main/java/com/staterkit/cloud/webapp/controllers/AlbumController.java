@@ -11,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.staterkit.cloud.webapp.domain.Album;
 import com.staterkit.cloud.webapp.service.AlbumService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -45,8 +46,12 @@ public class AlbumController {
 	 */
 	@RequestMapping(value = "/albums", method = RequestMethod.GET)
 	public List<Album> listProducts(Model model) {
-		List<Album> albums = (List<Album>) albumService.getAlbumList();
-		return albums;
+		if(albumService != null){
+			List<Album> albums = (List<Album>) albumService.getAlbumList();
+			return albums;
+		}else{
+			return new ArrayList<Album>();
+		}
 
 	}
 
@@ -61,9 +66,13 @@ public class AlbumController {
 	 */
 	@RequestMapping(value = "/deletealbum", method = RequestMethod.GET)
 	public List<Album> deleteAlbum(@RequestParam("id") String id, Model model) {
-		albumService.removeAlbum(id);
-		List<Album> albums = albumService.getAlbumList();
-		return albums;
+		if(albumService != null){
+			albumService.removeAlbum(id);
+			List<Album> albums = albumService.getAlbumList();
+			return albums;
+		}else{
+			return new ArrayList<Album>();
+		}
 	}
 
 	/**
@@ -81,10 +90,13 @@ public class AlbumController {
 	public List<Album> addAlbum(@RequestParam(value = "title") String title,
 			@RequestParam(value = "artist") String artist, @RequestParam(value = "releaseYear") String releaseYear,
 			Model model) {
-
-		albumService.saveAlbum(title, artist, releaseYear);
-		List<Album> albums = albumService.getAlbumList();
-		return albums;
+		if(albumService != null){
+			albumService.saveAlbum(title, artist, releaseYear);
+			List<Album> albums = albumService.getAlbumList();
+			return albums;
+		}else{
+			return new ArrayList<Album>();
+		}
 	}
 
 	/**
@@ -103,8 +115,12 @@ public class AlbumController {
 	public List<Album> editAlbum(@RequestParam(value = "title") String title,
 			@RequestParam(value = "artist") String artist, @RequestParam(value = "releaseYear") String releaseYear,
 			@RequestParam(value = "id", required = true) String id, Model model) {
-		albumService.editAlbum(id, title, artist, releaseYear);
-		List<Album> albums = albumService.getAlbumList();
-		return albums;
+		if(albumService != null){
+			albumService.editAlbum(id, title, artist, releaseYear);
+			List<Album> albums = albumService.getAlbumList();
+			return albums;
+		}else{
+			return new ArrayList<Album>();
+		}
 	}
 }

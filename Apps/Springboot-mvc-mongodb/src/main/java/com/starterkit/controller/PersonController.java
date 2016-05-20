@@ -3,6 +3,7 @@
  */
 package com.starterkit.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,8 +46,12 @@ public class PersonController {
 
 	public List<Person> getAllPersons() {
 		List<Person> listOfPersons = null;
-		listOfPersons = personRepository.findAll();
-		return listOfPersons;
+		if(personRepository !=null){
+			listOfPersons = personRepository.findAll();
+			return listOfPersons;
+		}else{
+			return new ArrayList<Person>();
+		}
 	}
 
 	/**
@@ -75,8 +80,11 @@ public class PersonController {
 
 	@RequestMapping(value = "/deletePerson", method = RequestMethod.GET)
 	public @ResponseBody List<Person> deletePerson(@RequestParam("id") String id, Model model) {
-		personRepository.delete(id);
+		if(personRepository !=null){
+			personRepository.delete(id);
+		}
 		return getAllPersons();
+		
 	}
 
 	/**
@@ -94,10 +102,11 @@ public class PersonController {
 	public @ResponseBody List<Person> editPerson(@RequestParam(value = "firstName") String firstName,
 			@RequestParam(value = "lastName") String lastName, @RequestParam(value = "id", required = true) String id,
 			Model model) {
-
-		Person person = new Person(firstName, lastName);
-		person.setId(id);
-		personRepository.save(person);
+		if(personRepository !=null){
+			Person person = new Person(firstName, lastName);
+			person.setId(id);
+			personRepository.save(person);
+		}
 		return getAllPersons();
 	}
 
@@ -115,9 +124,10 @@ public class PersonController {
 	@RequestMapping(value = "/addPerson", method = RequestMethod.POST)
 	public @ResponseBody List<Person> addPerson(@RequestParam(value = "firstName") String firstName,
 			@RequestParam(value = "lastName") String lastName, Model model) {
-
-		Person person = new Person(firstName, lastName);
-		personRepository.save(person);
+		if(personRepository !=null){
+			Person person = new Person(firstName, lastName);
+			personRepository.save(person);
+		}
 		return getAllPersons();
 	}
 

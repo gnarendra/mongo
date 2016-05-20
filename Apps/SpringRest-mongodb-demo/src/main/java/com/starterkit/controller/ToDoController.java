@@ -1,5 +1,6 @@
 package com.starterkit.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,8 +47,13 @@ public class ToDoController {
 	 */
 	@RequestMapping(value = "/tasks", method = RequestMethod.GET)
 	public List<ToDo> listTasks(Model model) {
-		List<ToDo> tasks = (List<ToDo>) toDoService.getAllTask();
-		return tasks;
+		if(toDoService != null){
+			List<ToDo> tasks = (List<ToDo>) toDoService.getAllTask();
+			return tasks;
+		}else{
+			return new ArrayList<ToDo>();
+		}
+		
 
 	}
 
@@ -63,9 +69,14 @@ public class ToDoController {
 	 */
 	@RequestMapping(value = "/createTask", method = RequestMethod.POST)
 	public List<ToDo> addTask(@RequestParam(value = "taskName") String taskName, Model model) {
-		toDoService.saveTask(taskName);
-		List<ToDo> tasks = (List<ToDo>) toDoService.getAllTask();
-		return tasks;
+		if(toDoService !=null){
+			toDoService.saveTask(taskName);
+			List<ToDo> tasks = (List<ToDo>) toDoService.getAllTask();
+			return tasks;
+		}else{
+			return new ArrayList<ToDo>();
+		}
+		
 
 	}
 
@@ -83,9 +94,13 @@ public class ToDoController {
 	@RequestMapping(value = "/editTask", method = RequestMethod.POST)
 	public List<ToDo> editTodo(@RequestParam(value = "taskName") String taskName, @RequestParam("id") String id,
 			Model model) {
-		toDoService.editTask(id, taskName);
-		List<ToDo> tasks = (List<ToDo>) toDoService.getAllTask();
-		return tasks;
+		if(toDoService != null){
+			toDoService.editTask(id, taskName);
+			List<ToDo> tasks = (List<ToDo>) toDoService.getAllTask();
+			return tasks;
+		}else{
+			return new ArrayList<ToDo>();
+		}
 	}
 
 	/**
@@ -99,9 +114,13 @@ public class ToDoController {
 	 */
 	@RequestMapping(value = "/deleteTask", method = RequestMethod.GET)
 	public List<ToDo> deleteTask(@RequestParam("id") String id, Model model) {
-		toDoService.removetask(id);
-		List<ToDo> tasks = (List<ToDo>) toDoService.getAllTask();
-		return tasks;
+		if(toDoService != null){
+			toDoService.removetask(id);
+			List<ToDo> tasks = (List<ToDo>) toDoService.getAllTask();
+			return tasks;
+		}else{
+			return new ArrayList<ToDo>();
+		}
 	}
 
 }

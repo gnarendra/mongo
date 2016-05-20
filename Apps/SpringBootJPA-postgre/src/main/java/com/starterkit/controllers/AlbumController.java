@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.starterkit.domain.Album;
 import com.starterkit.services.AlbumService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -45,8 +46,12 @@ public class AlbumController {
 	 */
 	@RequestMapping(value = "/albums", method = RequestMethod.GET)
 	public @ResponseBody List<Album> listProducts(Model model) {
-		List<Album> albums = (List<Album>) albumService.getAlbumList();
-		return albums;
+		if(albumService != null){
+			List<Album> albums = (List<Album>) albumService.getAlbumList();
+			return albums;
+		}else{
+			return new ArrayList<Album>();
+		}
 	}
 
 	/**
@@ -60,9 +65,13 @@ public class AlbumController {
 	 */
 	@RequestMapping(value = "/deletealbum", method = RequestMethod.GET)
 	public @ResponseBody List<Album> deleteAlbum(@RequestParam("id") String id, Model model) {
-		albumService.removeAlbum(id);
-		List<Album> albums = albumService.getAlbumList();
-		return albums;
+		if(albumService != null){
+			albumService.removeAlbum(id);
+			List<Album> albums = albumService.getAlbumList();
+			return albums;
+		}else{
+			return new ArrayList<Album>();
+		}
 	}
 
 	/**
@@ -80,11 +89,13 @@ public class AlbumController {
 	public @ResponseBody List<Album> addAlbum(@RequestParam(value = "title") String title,
 			@RequestParam(value = "artist") String artist, @RequestParam(value = "releaseYear") String releaseYear,
 			Model model) {
-
-		// Album album = new Album(title, artist, releaseYear);
-		albumService.saveAlbum(title, artist, releaseYear);
-		List<Album> albums = albumService.getAlbumList();
-		return albums;
+		if(albumService != null){
+			albumService.saveAlbum(title, artist, releaseYear);
+			List<Album> albums = albumService.getAlbumList();
+			return albums;
+		}else{
+			return new ArrayList<Album>();
+		}
 	}
 
 	/**
@@ -103,11 +114,14 @@ public class AlbumController {
 	public @ResponseBody List<Album> editAlbum(@RequestParam(value = "title") String title,
 			@RequestParam(value = "artist") String artist, @RequestParam(value = "releaseYear") String releaseYear,
 			@RequestParam(value = "id", required = true) String id, Model model) {
-
-		Album album = new Album(title, artist, releaseYear);
-		album.setId(id);
-		albumService.editAlbum(id, title, artist, releaseYear);
-		List<Album> albums = albumService.getAlbumList();
-		return albums;
+		if(albumService != null){
+			Album album = new Album(title, artist, releaseYear);
+			album.setId(id);
+			albumService.editAlbum(id, title, artist, releaseYear);
+			List<Album> albums = albumService.getAlbumList();
+			return albums;
+		}else{
+			return new ArrayList<Album>();
+		}
 	}
 }
