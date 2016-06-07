@@ -1,8 +1,0 @@
-applications:
-- name: SpringrestMysqlDemo
-  memory: 400M
-  instances: 1
-  host: SpringrestMysqlDemo
-  buildpack: java_buildpack
-  path: target/Springrest-mysql-1.jar
-
