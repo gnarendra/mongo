@@ -1,8 +1,0 @@
-applications:
-- name: mysqlliberty
-  memory: 600M
-  instances: 1
-  host: mysqlliberty
-  path: target/Springrest-mysql-1.jar
-  buildpack: liberty-for-java
-
