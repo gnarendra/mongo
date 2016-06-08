@@ -106,3 +106,8 @@
  - MongoRepository provided by MongoDB handles the VCAP parsing for DB connection details, of MongoDB
  - Spring Boot usage in collaboration with the above Repository classes, abstracts the DB connection details parsing from the developer, thus reducing considerable effort for the developer
 
+## How to Run Application in local:
+ - Uncomment the connection properties in application property file
+ - Update the connection properties like host , port , username ,password and DB name
+ - Remove the DataSourceConfiguration class, In order to avoid cloud DB connection.
+
