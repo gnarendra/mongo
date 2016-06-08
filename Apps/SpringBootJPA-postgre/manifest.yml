@@ -1,8 +1,7 @@
 applications:
 - name: SpringbootPostgreDemo
-  memory: 400M
+  memory: 600M
   instances: 1
   host: SpringbootPostgreDemo
-  buildpack: java_buildpack
-  path: ./target/SpringBootposgreApp-0.0.1.jar
+  path: ./target/Springboot-postgre-1.jar
 

@@ -10,25 +10,24 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import com.starterkit.controllers.AlbumController;
-import com.starterkit.services.AlbumService;
-
-
+import com.staterkit.cloud.webapp.Application;
+import com.staterkit.cloud.webapp.controllers.AlbumController;
+import com.staterkit.cloud.webapp.repositories.JpaAlbumRepository;
+import com.staterkit.cloud.webapp.service.AlbumService;
 
 /**
  * @author narendra.gurram@cognizant.com
  *
  */
-@SpringApplicationConfiguration(classes = com.starterkit.Application.class)   
+@SpringApplicationConfiguration(classes = Application.class)   
 public class ControllerTest {
 
 		@Mock
-		private JpaRepository jpaAlbumRepository;
+		private JpaAlbumRepository jpaAlbumRepository;
 		
 		@InjectMocks
 		private AlbumService albumsService;

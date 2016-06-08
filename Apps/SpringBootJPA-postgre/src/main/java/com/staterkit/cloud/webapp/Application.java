@@ -1,16 +1,17 @@
 /**
  * 
  */
-package com.starterkit;
+package com.staterkit.cloud.webapp;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @author Anand.Kittappa@cognizant.com This is a Spring boot application class
+ * @author narendra.gurram@cognizant.com.This is a Spring boot application class
  *         which implements a CommandLineRunner. This class will create and load
  *         all the required beans during runtime
+ *
  */
 
 @SpringBootApplication
@@ -21,8 +22,7 @@ public class Application implements CommandLineRunner {
 	 * 
 	 * @param args
 	 */
-	public static void main(String args[]) throws Exception {
-		// TODO Auto-generated method stub
+	public static void main(String[] args) throws Exception {
 		SpringApplication.run(new Object[] { Application.class }, args);
 	}
 
