@@ -1,8 +1,8 @@
-package com.staterkit.cloud.webapp.repositories;
+package com.staterkit.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.staterkit.cloud.webapp.domain.Album;
+import com.staterkit.domain.Album;
 
 /**
  * @author narendra.gurram@cognizant.com.JpaRepository reads system environment

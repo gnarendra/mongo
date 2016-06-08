@@ -1,4 +1,4 @@
-package  com.staterkit.cloud.webapp.domain;
+package  com.staterkit.domain;
 
 import org.hibernate.HibernateException;
 import org.hibernate.engine.spi.SessionImplementor;

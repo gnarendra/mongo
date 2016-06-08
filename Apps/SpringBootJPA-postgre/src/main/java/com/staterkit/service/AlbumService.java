@@ -1,15 +1,15 @@
 /**
  * 
  */
-package com.staterkit.cloud.webapp.service;
+package com.staterkit.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.staterkit.cloud.webapp.domain.Album;
-import com.staterkit.cloud.webapp.repositories.JpaAlbumRepository;
+import com.staterkit.domain.Album;
+import com.staterkit.repositories.JpaAlbumRepository;
 
 /**
  * @author narendra.gurram@cognizant.com

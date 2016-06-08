@@ -1,4 +1,4 @@
-package com.staterkit.cloud.webapp;
+package com.staterkit;
 
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;

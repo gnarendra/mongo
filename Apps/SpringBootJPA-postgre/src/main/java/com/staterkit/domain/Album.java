@@ -1,4 +1,4 @@
-package com.staterkit.cloud.webapp.domain;
+package com.staterkit.domain;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -15,7 +15,7 @@ public class Album
     @GeneratedValue(strategy = GenerationType.AUTO)
 //    @Column(length=40)
 //    @GeneratedValue(generator="randomId")
-//    @GenericGenerator(name="randomId", strategy="com.staterkit.cloud.webapp.domain.RandomIdGenerator")
+//    @GenericGenerator(name="randomId", strategy="com.staterkit.domain.RandomIdGenerator")
     private Long id;
 
     

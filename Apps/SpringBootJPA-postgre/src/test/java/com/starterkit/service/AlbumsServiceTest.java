@@ -17,10 +17,10 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 
-import com.staterkit.cloud.webapp.Application;
-import com.staterkit.cloud.webapp.domain.Album;
-import com.staterkit.cloud.webapp.repositories.JpaAlbumRepository;
-import com.staterkit.cloud.webapp.service.AlbumService;
+import com.staterkit.Application;
+import com.staterkit.domain.Album;
+import com.staterkit.repositories.JpaAlbumRepository;
+import com.staterkit.service.AlbumService;
 
 /**
  * @author narendra.gurram@cognizant.com

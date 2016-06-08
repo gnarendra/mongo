@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.staterkit.cloud.webapp;
+package com.staterkit;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
