@@ -1,7 +1,0 @@
-applications:
-- name: SpringbootPostgreDemo
-  memory: 600M
-  instances: 1
-  host: SpringbootPostgreDemo
-  path: ./target/Springboot-postgre-1.jar
-

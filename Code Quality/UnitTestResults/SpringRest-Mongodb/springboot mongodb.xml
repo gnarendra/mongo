@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="ToDoServiceTest" project="Restmongoinstance" tests="4" started="4" failures="0" errors="0" ignored="0">
-  
-<testsuite name="com.starterkit.service.PersonServiceTest" time="0.285">
-    <testcase name="editTaskTest" classname="com.starterkit.service.ToDoServiceTest" time="0.275"/>
-    <testcase name="saveTaskTest" classname="com.starterkit.service.ToDoServiceTest" time="0.001"/>
-    <testcase name="removeTaskTest" classname="com.starterkit.service.ToDoServiceTest" time="0.002"/>
-    <testcase name="getAllTaskTest” classname="com.starterkit.service.ToDoServiceTest" time="0.005"/>
-  </testsuite>
-</testrun>

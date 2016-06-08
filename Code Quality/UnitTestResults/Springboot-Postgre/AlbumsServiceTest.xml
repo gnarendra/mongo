@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="AlbumsServiceTest (3)" project="Springrest-mysql" tests="3" started="3" failures="0" errors="0" ignored="0">
-  <testsuite name="com.starterkit.service.AlbumsServiceTest" time="0.285">
-    <testcase name="saveAlbumTest" classname="com.starterkit.service.AlbumsServiceTest" time="0.278"/>
-    <testcase name="getAlbumListTest" classname="com.starterkit.service.AlbumsServiceTest" time="0.005"/>
-    <testcase name="editTasktest" classname="com.starterkit.service.AlbumsServiceTest" time="0.002"/>
-  </testsuite>
-</testrun>
